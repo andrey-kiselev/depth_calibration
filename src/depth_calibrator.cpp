@@ -107,12 +107,12 @@ cv::Mat make_column_index_matrix(unsigned int height, unsigned int width)
 
 cv::Mat calculate_plane(std::vector<float>& plane_coefficients, unsigned int height, unsigned int width)
 {
-  double center_x = camera_model_.cx();
-  double center_y = camera_model_.cy();
+  double center_x = 314.748002f; //camera_model_.cx();
+  double center_y = 242.50106f; //camera_model_.cy();
 
   double mm_to_m = 0.001;
-  double constant_x = mm_to_m / camera_model_.fx();
-  double constant_y = mm_to_m / camera_model_.fy();
+  double constant_x = mm_to_m / 542.193326f; //camera_model_.fx();
+  double constant_y = mm_to_m / 541.656577f; //camera_model_.fy();
 
   double a = plane_coefficients[0];
   double b = plane_coefficients[1];
